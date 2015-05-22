@@ -9,13 +9,23 @@ public class Task1
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter time of call :");
-        byte TimeOfCall = scanner.nextByte();
-        if (TimeOfCall < 8 | TimeOfCall > 21) {
-            System.out.println("Абонент отдыхает!");
+        try {
+            byte TimeOfCall = scanner.nextByte();
+            if (TimeOfCall < 0 | TimeOfCall > 24) {
+                System.out.println("Error not correct time,use only range 0-24");
+            }
+            else {
+                if (TimeOfCall < 8 | TimeOfCall > 21) {
+                    System.out.println("Абонент отдыхает!");
+                }
+                else {
+                    System.out.println("Привет!");
+                }
+            }
         }
-        else {
-            System.out.println("Привет!");
+        catch (Exception e ) 
+        {
+            System.out.println("Error not correct time,use only integer range 0-24 ");
+        }
         }
     }
-
-}
