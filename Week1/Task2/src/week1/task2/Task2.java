@@ -24,7 +24,7 @@ public class Task2
                 min = ArrayForNumbers[i];
             }
         }
-        System.out.println("Max="+max+" Min="+min);
+        System.out.println("Max=" + max + " Min=" + min);
     }
 
 }
